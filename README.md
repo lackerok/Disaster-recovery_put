@@ -13,18 +13,18 @@
 <img width="672" height="240" alt="image" src="https://github.com/user-attachments/assets/7a79fd71-2a70-474c-aee5-98ff58623aa1" />
 
 # Баш скрипт:
-'''
+```
 #!/bin/bash
 if systemctl is-active --quiet nginx && [ -f /var/www/html/index.html ]; then
     exit 0
 else
     exit 1
 fi
-'''
+```
 
 Конфигурационный файл:
 
-'''
+```
 vrrp_script check_nginx {
     script "/usr/local/bin/check_nginx.sh"
     interval 3
@@ -48,12 +48,12 @@ vrrp_instance VI_1 {
         check_nginx
     }
 }
-'''
+```
 # БЭКАП
 
 Конфигурационный файл:
 
-'''
+```
 vrrp_script check_nginx {
     script "/usr/local/bin/check_nginx.sh"
     interval 3
@@ -77,4 +77,4 @@ vrrp_instance VI_1 {
         check_nginx
     }
 }
-'''
+```
