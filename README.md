@@ -15,7 +15,6 @@
 # Баш скрипт:
 '''
 #!/bin/bash
-# Скрипт проверяет работоспособность Nginx и наличие файла-маячка
 if systemctl is-active --quiet nginx && [ -f /var/www/html/index.html ]; then
     exit 0
 else
